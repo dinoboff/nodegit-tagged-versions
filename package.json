@@ -1,7 +1,7 @@
 {
-  "name": "tagged-versions",
-  "version": "1.3.0",
-  "description": "Get tagged semver-compatible project versions",
+  "name": "nodegit-tagged-versions",
+  "version": "1.0.0-rc.0",
+  "description": "Get tagged semver-compatible project versions using nodegit",
   "main": "src/index.js",
   "directories": {
     "test": "test"
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ikhemissi/tagged-versions.git"
+    "url": "git+https://github.com/dinoboff/nodegit-tagged-versions.git"
   },
   "keywords": [
     "tags",
@@ -26,9 +26,9 @@
   "author": "Iheb Khemissi <iheb.khemissi@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ikhemissi/tagged-versions/issues"
+    "url": "https://github.com/dinoboff/nodegit-tagged-versions/issues"
   },
-  "homepage": "https://github.com/ikhemissi/tagged-versions#readme",
+  "homepage": "https://github.com/dinoboff/nodegit-tagged-versions#readme",
   "config": {
     "commitizen": {
       "path": "./node_modules/rb-conventional-changelog"

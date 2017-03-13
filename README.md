@@ -1,4 +1,4 @@
-# tagged-versions
+# nodegit-tagged-versions
 
 > Get tagged semver-compatible project versions [{ version, tag, hash, date }]
 
@@ -6,10 +6,12 @@
 [![Coverage Status][coveralls-badge]][coveralls-link]
 [![NPM version][shields-badge]][npm-link]
 
+This is a fork of [tagged-versions] using [nodegit] instead of a git child process.
+
 ## Installation
 ```sh
 npm install nodegit@0.18 --save
-npm install tagged-versions --save
+npm install nodegit-tagged-versions --save
 ```
 
 Supported Node versions: 5+
@@ -19,7 +21,7 @@ Supported Node versions: 5+
 ### All project versions
 Return all the tagged project versions:
 ```javascript
-const taggedVersions = require('tagged-versions');
+const taggedVersions = require('nodegit-tagged-versions');
 return taggedVersions.getList()
   .then(versions => console.log(versions));
 
@@ -33,7 +35,7 @@ return taggedVersions.getList()
 
 You can optionally filter versions with a [semver range](https://github.com/npm/node-semver#advanced-range-syntax):
 ```javascript
-const taggedVersions = require('tagged-versions');
+const taggedVersions = require('nodegit-tagged-versions');
 return taggedVersions.getList('^1.1.0')
   .then(versions => console.log(versions));
 
@@ -46,7 +48,7 @@ return taggedVersions.getList('^1.1.0')
 
 Or with a [revision range](https://git-scm.com/docs/revisions#_specifying_ranges):
 ```javascript
-const taggedVersions = require('tagged-versions');
+const taggedVersions = require('nodegit-tagged-versions');
 return taggedVersions.getList({rev: 'v1.1.0..v1.2.0'})
   .then(versions => console.log(versions));
 
@@ -59,7 +61,7 @@ return taggedVersions.getList({rev: 'v1.1.0..v1.2.0'})
 ### Last project version
 Return the last tagged project version:
 ```javascript
-const taggedVersions = require('tagged-versions');
+const taggedVersions = require('nodegit-tagged-versions');
 return taggedVersions.getLastVersion()
   .then(versions => console.log(version));
 
@@ -73,7 +75,7 @@ return taggedVersions.getLastVersion()
 
 Like with `getList`, you can also filter with a [semver range](https://github.com/npm/node-semver#advanced-range-syntax):
 ```javascript
-const taggedVersions = require('tagged-versions');
+const taggedVersions = require('nodegit-tagged-versions');
 return taggedVersions.getLastVersion('~1.1')
   .then(versions => console.log(version));
 
@@ -88,9 +90,9 @@ return taggedVersions.getLastVersion('~1.1')
 ## Contributing
 Please follow the [Airbnb guidelines](https://github.com/airbnb/javascript) and commit your changes with [commitzen](https://www.npmjs.com/package/commitizen) using `git cz`.
 
-[travis-badge]: https://travis-ci.org/ikhemissi/tagged-versions.svg?branch=master
-[travis-link]: https://travis-ci.org/ikhemissi/tagged-versions
-[coveralls-badge]: https://coveralls.io/repos/github/ikhemissi/tagged-versions/badge.svg?branch=master
-[coveralls-link]: https://coveralls.io/github/ikhemissi/tagged-versions?branch=master
-[shields-badge]: https://img.shields.io/npm/v/tagged-versions.svg
-[npm-link]: https://www.npmjs.com/package/tagged-versions
+[travis-badge]: https://travis-ci.org/dinoboff/nodegit-tagged-versions.svg?branch=master
+[travis-link]: https://travis-ci.org/dinoboff/nodegit-tagged-versions
+[coveralls-badge]: https://coveralls.io/repos/github/dinoboff/nodegit-tagged-versions/badge.svg?branch=master
+[coveralls-link]: https://coveralls.io/github/dinoboff/nodegit-tagged-versions?branch=master
+[shields-badge]: https://img.shields.io/npm/v/nodegit-tagged-versions.svg
+[npm-link]: https://www.npmjs.com/package/nodegit-tagged-versions
