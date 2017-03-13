@@ -14,7 +14,7 @@ npm install nodegit@0.18 --save
 npm install nodegit-tagged-versions --save
 ```
 
-Supported Node versions: 5+
+Supported Node versions: 6+
 
 ## Usage
 
