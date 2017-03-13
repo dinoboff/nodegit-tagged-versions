@@ -90,6 +90,8 @@ return taggedVersions.getLastVersion('~1.1')
 ## Contributing
 Please follow the [Airbnb guidelines](https://github.com/airbnb/javascript) and commit your changes with [commitzen](https://www.npmjs.com/package/commitizen) using `git cz`.
 
+[nodegit]: http://www.nodegit.org
+[tagged-versions]: https://github.com/ikhemissi/tagged-versions
 [travis-badge]: https://travis-ci.org/dinoboff/nodegit-tagged-versions.svg?branch=master
 [travis-link]: https://travis-ci.org/dinoboff/nodegit-tagged-versions
 [coveralls-badge]: https://coveralls.io/repos/github/dinoboff/nodegit-tagged-versions/badge.svg?branch=master
